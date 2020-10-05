@@ -1,6 +1,6 @@
 function badge(license) {
     if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-green.svg)`
+    return `![license](https://img.shields.io/badge/License-${license}-brightgreen.svg)`
   }
   return '';
 }
@@ -23,7 +23,7 @@ function generateMarkdown(data) {
   ${data.repo}
 
   ## Table of Contents
-  - [Insatllation](#Installation)
+  - [Installation](#Installation)
   - [Usage](#Usage)
   - [License](#License)
   - [Contributors](#Contributors)
@@ -39,7 +39,7 @@ function generateMarkdown(data) {
 
   ## License
 
-  This repository has ${data.license} licensing.
+  This repository is covered under ${data.license} licensing.
 
   ## Contributors
 
