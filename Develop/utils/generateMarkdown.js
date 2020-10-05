@@ -1,8 +1,18 @@
+function badge(license) {
+    if (license !== 'None') {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-green.svg)`
+  }
+  return '';
+}
+
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
   
   # ${data.title}
+
+  ${badge(data.license)}
 
   ## Description
 
@@ -14,9 +24,10 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   - [Insatllation](#Installation)
-  - [Usage](#Isage)
+  - [Usage](#Usage)
   - [License](#License)
   - [Contributors](#Contributors)
+  - [Questions](#Questions)
 
   ## Installation
 
@@ -28,7 +39,7 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${data.license}
+  This repository has ${data.license} licensing.
 
   ## Contributors
 
@@ -40,7 +51,7 @@ function generateMarkdown(data) {
 
   If you have any questions, please feel free to email @ ${data.email}.
   
-  You can see more of my work at github.com/${data.username}
+  You can see more of my work at www.github.com/${data.username}
 
 
 

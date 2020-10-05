@@ -2,6 +2,8 @@
   
   # test
 
+  ![GitHub license](https://img.shields.io/badge/license-Apache-green.svg)
+
   ## Description
 
    test
@@ -12,7 +14,7 @@
 
   ## Table of Contents
   - [Insatllation](#Installation)
-  - [Usage](#Isage)
+  - [Usage](#Usage)
   - [License](#License)
   - [Contributors](#Contributors)
 
@@ -26,7 +28,7 @@
 
   ## License
 
-  GNU
+  This repository has Apache licensing.
 
   ## Contributors
 
@@ -38,7 +40,7 @@
 
   If you have any questions, please feel free to email @ test.
   
-  You can see more of my work at github.com/text
+  You can see more of my work at www.github.com/test
 
 
 
