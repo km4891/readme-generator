@@ -1,3 +1,12 @@
+// global
+const inquirer = require('inquirer');
+const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkdown')
+
+const promptUser = () => {
+    return inquirer.prompt(questions)
+};
+
 // array of questions for user
 const questions = [
     
