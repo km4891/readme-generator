@@ -44,7 +44,7 @@ const questions = [
     {
         type: 'input',          
         name: 'installation',
-        message: 'What is your Github username?'
+        message: 'What is needed for installation?'
     },
 
     {
@@ -59,24 +59,34 @@ const questions = [
         message: 'Who has contributed to this repo?'
     },
 
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'What command should be used to run tests?',
-        default: 'npm test'
-    },
-
-
+   
 
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
+function writeToFile(data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./responseREADME.md', data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve({
+                ok: true,
+                message: 'Click on responseREADME.md to view you file!'
+            });
+        });
+    });
+};
 
 // function to initialize program
 function init() {
-
+    promptUser()
+        .then(data => console.log(data))
+        //.then(data => writeToFile(generateMarkdown(data)));
+        
+        
 }
 
 // function call to initialize program
