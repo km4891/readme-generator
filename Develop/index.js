@@ -21,6 +21,12 @@ const questions = [
         name: 'email',
         message: 'What is your email?'
     },
+
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Please provide a link to your repository.'
+    },
     
     {
         type: 'input',
@@ -55,7 +61,7 @@ const questions = [
 
     {
         type: 'input',          
-        name: 'contributing',   
+        name: 'contributors',   
         message: 'Who has contributed to this repo?'
     },
 
@@ -83,8 +89,8 @@ function writeToFile(data) {
 // function to initialize program
 function init() {
     promptUser()
-        .then(data => console.log(data))
-        //.then(data => writeToFile(generateMarkdown(data)));
+        //.then(data => console.log(data))
+        .then(data => writeToFile(generateMarkdown(data)));
         
         
 }
