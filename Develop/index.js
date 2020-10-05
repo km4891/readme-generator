@@ -72,17 +72,17 @@ const questions = [
 // function to write README file
 function writeToFile(data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./responseREADME.md', data, err => {
-            if (err) {
-                reject(err);
-                return;
+    fs.writeFile('./responseREADME.md', data, err => {
+     if (err) {
+     reject(err);
+        return;
             }
 
-            resolve({
-                ok: true,
-                message: 'Click on responseREADME.md to view you file!'
-            });
-        });
+     resolve({
+     ok: true,
+    message: 'Click on responseREADME.md to view you file!'
+    });
+    });
     });
 };
 
