@@ -13,13 +13,29 @@ const questions = [
     {
         type: 'input',
         name: 'username',
-        message: 'What is your Github username?'
+        message: 'What is your Github username?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your Github username!');
+                return false;
+            }
+        }
     },
     
     {
         type: 'input',          
         name: 'email',
-        message: 'What is your email?'
+        message: 'What is your email?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your email!');
+                return false;
+            }
+        }
     },
 
     {
@@ -31,7 +47,15 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is your project title?'
+        message: 'What is your project title?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter a project title!');
+                return false;
+            }
+        }
     },
 
     {
@@ -80,7 +104,7 @@ function writeToFile(data) {
 
      resolve({
      ok: true,
-    message: 'Click on responseREADME.md to view you file!'
+    message: 'responseREADME.md file has been created!'
     });
     });
     });
